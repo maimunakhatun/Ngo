@@ -1,5 +1,5 @@
 import react from "react"
-import Arraylist from "./Array"
+import ProductArray from './ArrayProduct'
 import MenuBar from './Menubar'
 import Footer from"./Footer"
 const How = () => {
@@ -26,7 +26,7 @@ const How = () => {
 </div>
 
   
-         <Arraylist/>
+         <ProductArray/>
          </div>
        
 <div className="container-fluid my-5">

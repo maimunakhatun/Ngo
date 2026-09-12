@@ -1,10 +1,10 @@
 import React from "react";
 
 import MenuBar from "./Menubar";
-import ArrayList from "./Array";
 import pic2 from '../assets/impact2.png'
 import Benefits from "./Benefits";
 import pic from '../assets/impct1.png'
+import ImpactArray from "./ArrayImpact";
 
 
 const Impact = () => {
@@ -30,7 +30,7 @@ const Impact = () => {
 
 
 
-             <ArrayList/>
+             <ImpactArray/>
 
 
 
