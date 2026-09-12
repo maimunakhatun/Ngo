@@ -1,39 +1,65 @@
 import React from "react";
+<<<<<<< HEAD
 import img from '../assets/img1.jpeg'
+=======
+>>>>>>> 95749df661b9b8b7477d17d6b170e3498854cba0
 
 
 const Home = () => {
     return (
         <>
+<<<<<<< HEAD
             <div className="container-fluid descrip">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-3 col-lg-3 col-sm-12 First1">
+=======
+            <div className="container-fluid descrip-tion mt-4">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-3 col-lg-3 col-sm-12 First">
+>>>>>>> 95749df661b9b8b7477d17d6b170e3498854cba0
                             <i className="fa-solid fa-leaf icon1"></i>
                             <h1>Reduce Food Waste</h1>
                             <h2>We collect surplus food from<br />restaurants, stores and farms.</h2>
                         </div>
 
+<<<<<<< HEAD
                         <div className="col-md-3 col-lg-3 col-sm-12 First1">
                             <i class="fa-solid fa-users icon1"></i>
+=======
+                        <div className="col-md-3 col-lg-3 col-sm-12 Second">
+                            <i class="fa-solid fa-users icon2"></i>
+>>>>>>> 95749df661b9b8b7477d17d6b170e3498854cba0
                             <h1>Support Communities</h1>
                             <h2>We distributes nutritious food<br />to those in need.</h2>
                         </div>
 
+<<<<<<< HEAD
                         <div className="col-md-3 col-lg-3 col-sm-12 First1">
                             <i class="fa-solid fa-arrows-spin icon1"></i>
+=======
+                        <div className="col-md-3 col-lg-3 col-sm-12 Third">
+                            <i class="fa-solid fa-arrows-spin icon3"></i>
+>>>>>>> 95749df661b9b8b7477d17d6b170e3498854cba0
                             <h1>Create a Sustainable Future</h1>
                             <h2>Less waste means a healtier<br />planet.</h2>
                         </div>
 
+<<<<<<< HEAD
                         <div className="col-md-3 col-lg-3 col-sm-12 First2">
                             <i class="fa-regular fa-heart icon1"></i>
+=======
+                        <div className="col-md-3 col-lg-3 col-sm-12 Forth">
+                            <i class="fa-regular fa-heart icon4"></i>
+>>>>>>> 95749df661b9b8b7477d17d6b170e3498854cba0
                             <h1>Build Awareness</h1>
                             <h2>We educate and inspire<br />for lasting change.</h2>
                         </div>
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
 
 
 
@@ -132,6 +158,8 @@ const Home = () => {
 
 
             
+=======
+>>>>>>> 95749df661b9b8b7477d17d6b170e3498854cba0
         </>
     )
 }
