@@ -9,7 +9,7 @@ const Home = () => {
                 <div className="container">
                     <div className="row">
 
-                        <div className="col-md-3 col-lg-3 col-sm-12 First1">
+                        <div className="col-md-3 col-lg-3 col-sm-12 First">
                             <i className="fa-solid fa-leaf icon1"></i>
                             <h1>Reduce Food Waste</h1>
                             <h2>
@@ -29,7 +29,7 @@ const Home = () => {
                             </h2>
                         </div>
 
-                        <div className="col-md-3 col-lg-3 col-sm-12 Third">
+                        <div className="col-md-3 col-lg-3 col-sm-12 Second">
                             <i className="fa-solid fa-arrows-spin icon3"></i>
                             <h1>Create a Sustainable Future</h1>
                             <h2>
@@ -206,6 +206,7 @@ const Home = () => {
 
                 </div>
             </div>
+
         </>
     );
 };

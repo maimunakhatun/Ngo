@@ -5,6 +5,7 @@ import pic2 from '../assets/impact2.png'
 import Benefits from "./Benefits";
 import pic from '../assets/impct1.png'
 import ImpactArray from "./ArrayImpact";
+import Footer from "./Footer"
 
 
 const Impact = () => {
@@ -43,7 +44,7 @@ const Impact = () => {
                         <h5 className="dd">View More Stories <i className="fa-solid fa-arrow-right icn"></i></h5>
                     </div>
                     <div className="col-md-8 col-lg-8 col-sm-12 im22">
-                        <h1></h1>
+                        <h1>hewhfiewhfiu</h1>
                     </div>
                 </div>
             </div>
@@ -65,6 +66,9 @@ const Impact = () => {
                     </div>
                 </div>
             </div>
+
+
+            <Footer/>
 
            
         </>

@@ -1,6 +1,7 @@
 import React from "react";
 import MenuBar from "./Menubar";
 import image1 from '../assets/cntct1.png'
+import Footer from "./Footer";
 
 
 const Contact = () => {
@@ -28,7 +29,7 @@ const Contact = () => {
 
 
 
-            <div className="container">
+            <div className="container mb-5">
                 <div className="row g-4">
 
                     {/* Contact Details */}
@@ -46,7 +47,7 @@ const Contact = () => {
                                         </div>
                                         <div className="contact-content">
                                             <h5>PHONE</h5>
-                                            <p>+91 7679024968, +91</p>
+                                            <p>+91 7679024968, +91 6297770824</p>
                                             <p>(Mon – Fri, 9 AM – 6 PM)</p>
                                         </div>
                                     </div>
@@ -108,6 +109,10 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+
+
+            <Footer/>
+
 
         </>
     )

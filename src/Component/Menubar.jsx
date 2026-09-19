@@ -39,37 +39,25 @@ const MenuBar = () => {
 
 
                                     <li>
-                                        <NavLink
-                                            to="/Howitworks"
-                                            className="menutab"
-                                        >
+                                        <NavLink to="/Howitworks" className="menutab">
                                             HOW IT WORKS
                                         </NavLink>
                                     </li>
 
                                     <li>
-                                        <NavLink
-                                            to="/Impact"
-                                            className="menutab"
-                                        >
+                                        <NavLink to="/Impact" className="menutab">
                                             Impact
                                         </NavLink>
                                     </li>
 
                                     <li>
-                                        <NavLink
-                                            to="/Getinvolve"
-                                            className="menutab"
-                                        >
+                                        <NavLink to="/Getinvolve" className="menutab">
                                             GET INVOLVED
                                         </NavLink>
                                     </li>
 
                                     <li>
-                                        <NavLink
-                                            to="/Contact"
-                                            className="menutab"
-                                        >
+                                        <NavLink to="/Contact" className="menutab">
                                             Contact us
                                         </NavLink>
                                     </li>
