@@ -40,6 +40,7 @@ const MenuBar = () => {
 
                 <li><NavLink to="/Contact" className="menutab">CONTACT US</NavLink></li>
               </ul>
+           
             </nav>
           </div>
         </div>

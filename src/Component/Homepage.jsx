@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../assets/img1.jpeg";
+import Footer from './Footer'
 
 const Home = () => {
     return (
@@ -183,7 +184,7 @@ const Home = () => {
             </div>
 
             {/* Call To Action */}
-            <div className="container back">
+            <div className="container-fluid back">
                 <div className="col-md-12 col-lg-12 col-sm-12 txt1">
 
                     <h1>Be a part of the change</h1>
@@ -206,6 +207,7 @@ const Home = () => {
 
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };
