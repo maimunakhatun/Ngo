@@ -3,6 +3,7 @@ import img from "../assets/img1.jpeg";
 import Footer from './Footer'
 
 const Home = () => {
+    //  const [show, setShow] = useState(false);
     return (
         <>
             {/* Top Description Section */}
@@ -196,9 +197,12 @@ const Home = () => {
                         spreading the word.
                     </p>
 
+
+                    {/* <Link to="/donor"> */}
                     <button className="btn btn">
                         <i className="fa-regular fa-heart"></i> Donate Now
                     </button>
+                    {/* </Link> */}
 
                     <button className="btn btn">
                         Get involved&nbsp;
