@@ -309,7 +309,16 @@
     background-color: #89bc84;
 }
 
-
+/* .Second2,.Second3{
+    text-align:center;
+}
+.Second2 .icn2, .Second3 .icn2{
+    display: block;
+    text-align: center;
+    margin:  0 auto 10px auto ;
+    width:100%;
+    font-size: 22px;
+} */
 /* =========================
    Common Headings
 ========================= */
@@ -1097,7 +1106,7 @@ h4 {
     gap: 30px;
     padding: 30px 60px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 0;
+    margin-top: 0px;
 }
 
 .footer-col h4 {
@@ -1169,6 +1178,7 @@ h4 {
     background-color: #f6fbf7;
     padding: 20px 0;
     height: 200px;
+    text-align: center;
 }
 
 .product-card {
@@ -1215,13 +1225,17 @@ h4 {
     background-color: #eaf6ec;
     padding: 20px;
     width: 100%;
-    margin-top: 20px;
-    height: 190px;
+    margin-top: 60px;
+    height: auto;
+    gap: 40px;
+    position: relative;
+    align-items: center;
+    overflow: visible;
 }
 
 .veg-main-img {
-    width: 80%;
-    height: 150px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -1293,156 +1307,553 @@ h4 {
    Get Involved Hero
 ========================= */
 
-.getinvolve-hero-section {
-    background-color: #f2faf2;
-    padding: 70px 0;
+.header-menu,
+.menu-area,
+nav,
+ul {
+    overflow: visible !important;
+}
+
+.dropdown-parent {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-item {
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-item:hover {
+    background: #eaf6ec;
+}
+
+.donor-page {
+    display: flex;
+    min-height: 100vh;
+    background: #fafffe;
+    font-family: 'Inter', sans-serif;
+}
+
+/* LEFT PHOTO - CHOTO KORA */
+.donor-left {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef8ee;
+    padding: 20px;
+}
+
+.donor-left img {
     width: 100%;
+    height: 75vh;
+    /* chaile 65vh kore aro choto korte parbe */
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.getinvolve-small-head {
-    color: #166534;
-    font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 1.5px;
+/* RIGHT FORM SIDE */
+.donor-right {
+    width: 60%;
+    padding: 25px 40px;
 }
 
-.getinvolve-main-title {
+.donor-right h1 {
+    font-size: 30px;
+    color: #0a3622;
     font-weight: 800;
-    color: #0f2e1d;
-    font-size: 42px;
-    line-height: 1.1;
-    margin-top: 12px;
+    line-height: 1.2;
 }
 
-.getinvolve-desc {
+.sub-text {
+    color: #666;
+    font-size: 14px;
+    margin: 10px 0 20px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1.5px solid #0f5132;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.tabs button.active {
+    background: #0f5132;
+    color: #fff;
+}
+
+.form-card {
+    background: #fff;
+    border: 1.5px solid #c8e6c9;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.form-card h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #0a3622;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+.field label {
+    width: 125px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.field .form-control {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1.5px solid #d6e9d6;
+    border-radius: 10px;
+    outline: none;
+}
+
+.field .form-control:focus {
+    border-color: #0f5132;
+}
+
+.donate-btn {
+    width: 100%;
+    padding: 12px;
+    background: #138a36;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.donate-btn:hover {
+    background: #0f6e2b;
+}
+
+/* Mobile Responsive */
+@media(max-width: 768px) {
+    .donor-page {
+        flex-direction: column;
+    }
+
+    .donor-left,
+    .donor-right {
+        width: 100%;
+    }
+
+    .donor-left img {
+        height: 45vh;
+    }
+}
+
+.member-page {
+    display: flex;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.member-left {
+    width: 50%;
+}
+
+.member-left img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.member-right {
+    width: 50%;
+    padding: 35px 45px;
+    overflow-y: auto;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    font-weight: 700;
+    color: #1a5c2e;
+}
+
+.brand span {
+    color: #2e7d32;
+}
+
+.member-right h1 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #0f2411;
+    line-height: 1.2;
+    margin-top: 15px;
+}
+
+.member-right .desc {
     font-size: 13px;
     color: #555;
-    margin-top: 15px;
-    max-width: 420px;
-    line-height: 1.6;
+    margin: 10px 0 22px;
+    line-height: 1.5;
 }
 
-.getinvolve-tagline {
-    color: #166534;
-    font-style: italic;
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.tabs button {
+    padding: 7px 16px;
+    border-radius: 20px;
+    border: 1.5px solid #1e7a34;
+    background: #fff;
+    cursor: pointer;
     font-weight: 600;
-    margin-top: 20px;
-    border-bottom: 2px solid #166534;
-    display: inline-block;
-    padding-bottom: 3px;
 }
 
-.getinvolve-img-bg {
-    background-color: #e0f2e0;
-    border-radius: 60% 40% 40% 60% / 60% 60% 40% 40%;
+.tabs button.active {
+    background: #1e7a34;
+    color: #fff;
+}
+
+.form-box {
+    border: none;
+}
+
+.row2 {
+    display: flex;
+    gap: 12px;
+}
+
+.field {
+    margin-bottom: 14px;
+    flex: 1;
+}
+
+.field label {
+    font-size: 13px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 13px;
+    outline: none;
+}
+
+.mtype {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.mtype button {
+    padding: 6px 18px;
+    border-radius: 20px;
+    border: 1.5px solid #ddd;
+    cursor: pointer;
+    background: #fff;
+    font-size: 13px;
+}
+
+.mtype button.active {
+    background: #1e7a34;
+    color: #fff;
+    border-color: #1e7a34;
+}
+
+.join-btn {
+    width: 100%;
+    background: #1e7a34;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.benefits {
+    background: #e8f5e9;
+    padding: 16px;
+    border-radius: 10px;
+    margin-top: 22px;
+}
+
+.benefits h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.benefits p {
+    font-size: 12px;
+    margin: 6px 0;
+}
+
+.benefits span {
+    color: #1e7a34;
+    font-weight: 700;
+}
+
+.trust {
+    text-align: center;
+    font-size: 11px;
+    color: #888;
+    margin-top: 15px;
+}
+
+.member-page {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.member-left {
+    width: 50%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2faf2;
     padding: 20px;
-    display: inline-block;
+    box-sizing: border-box;
 }
 
-.getinvolve-hero-img {
-    width: 380px;
-    height: 380px;
+.member-photo {
+    width: 100%;
+    height: 95%;
     object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    display: block;
+}
+
+.member-right {
+    width: 50%;
+    padding: 35px 40px;
+    overflow-y: auto;
+    background: white;
+}
+
+.member-logo {
+    text-align: right;
+    font-weight: bold;
+}
+
+.member-logo span {
+    color: #2e7d32;
+}
+
+.member-title {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+.member-tabs {
+    display: flex;
+    gap: 8px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.tab-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: white;
+    color: black;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    background: #2e7d32;
+    color: white;
+    border-color: #2e7d32;
+}
+
+.input-field {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 9px;
+    margin-top: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.label-text {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #2e7d32;
+    color: white;
+    padding: 11px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.benefits-box {
+    background: #e8f5e9;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 18px;
+    font-size: 12px;
+}
+
+.vol-page {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    font-family: Arial;
+    background: #f6fbf6;
+}
+
+.vol-left {
+    width: 50%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef7ee;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.vol-card {
+    width: 90%;
+    background: white;
+    border-radius: 24px;
+    padding: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.vol-blob {
+    width: 100%;
+    height: 520px;
+    border-radius: 65% 35% 35% 65% / 55% 45% 55% 45%;
+    overflow: hidden;
+    border: 6px solid white;
+}
+
+.vol-blob img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vol-badge {
+    position: absolute;
+    bottom: 10px;
+    left: -10px;
+    background: #1b5e20;
+    color: white;
+    padding: 12px 18px;
     border-radius: 30px;
+    font-size: 11px;
+    font-weight: bold;
+    border: 3px solid white;
 }
 
-
-/* =========================
-   Responsive
-========================= */
-
-@media (max-width: 768px) {
-
-    .stats-section {
-        flex-wrap: wrap;
-        gap: 20px 0;
-    }
-
-    .stat-item {
-        width: 50%;
-    }
-
-    .hero {
-        flex-direction: column;
-        padding: 50px 5%;
-    }
-
-    .hero-content,
-    .hero-image {
-        width: 100%;
-    }
-
-    .hero-image {
-        margin-top: 30px;
-    }
-
-    .impact-section {
-        flex-direction: column;
-        padding: 40px 30px;
-    }
-
-    .boxs {
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-        margin-top: 30px;
-    }
-
-    .team-section {
-        flex-direction: column;
-        padding: 40px 30px;
-    }
-
-    .team-container {
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-    }
-
-    .footer-bottom {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 30px;
-    }
+.vol-right {
+    width: 50%;
+    padding: 30px 40px;
+    background: white;
+    overflow-y: auto;
 }
 
+.tab-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: white;
+    font-size: 13px;
+    cursor: pointer;
+}
 
-@media (max-width: 500px) {
+.tab-btn.active {
+    background: #2e7d32;
+    color: white;
+    border-color: #2e7d32;
+}
 
-    .stats-section {
-        display: block;
-        padding: 15px;
-    }
+.input-field {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 9px;
+    margin-top: 4px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
 
-    .stat-item {
-        width: 100%;
-        padding: 15px;
-        border-bottom: 1px solid #c4ddc1;
-    }
+.label-text {
+    font-size: 11px;
+    font-weight: bold;
+}
 
-    .stat-item:last-child {
-        border-bottom: none;
-    }
-
-    .stat-item::after {
-        display: none;
-    }
-
-    .boxs {
-        grid-template-columns: 1fr;
-    }
-
-    .team-container {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-bottom {
-        grid-template-columns: 1fr;
-    }
-
-    .getinvolve-hero-img {
-        width: 280px;
-        height: 280px;
-    }
-
-    .heroh1 {
-        font-size: 36px;
-    }
+.submit-btn {
+    width: 100%;
+    background: #2e7d32;
+    color: white;
+    padding: 11px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 18px;
+    font-weight: bold;
+    cursor: pointer;
 }

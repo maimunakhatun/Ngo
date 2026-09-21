@@ -6,24 +6,25 @@ import Impact from './Component/ImpactPage'
 import Contact from './Component/ContactUs'
 import About from './Component/About'
 import How from './Component/Howitworks'
-import GetInvolved from './Component/Getinvolve'
 
-// import Home from './Component/Homepage'
+import Donor from './Component/Donor'
+import Member from './Component/Member'
+import Volunteer from './Component/Volunteer'
 
 function App() {
   return (
     <Router>
       <Routes>
-
         <Route path="/" element={<Call />} />
-
-        {/* <Route path="/Home" element={<Home />} /> */}
-
         <Route path="/Impact" element={<Impact />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/About" element={<About />} />
         <Route path="/Howitworks" element={<How />} />
-        <Route path="/Getinvolve" element={<GetInvolved />} />
+
+        {/* GET INVOLVED dropdown er jonno */}
+        <Route path="/donor" element={<Donor />} />
+        <Route path="/member" element={<Member />} />
+        <Route path="/volunteer" element={<Volunteer />} />
 
       </Routes>
     </Router>

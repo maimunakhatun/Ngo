@@ -97,7 +97,7 @@ const Home = () => {
                 <div className="container">
                     <div className="row">
 
-                        <div className="col-md-4 col-lg-4 col-sm-12 Second1">
+                        <div className="col-md-4 col-lg-4 col-sm-12 Second1 ">
                             <h3>our impact</h3>
                             <h1>Real Food. Real Change.</h1>
                             <h2>
@@ -106,25 +106,25 @@ const Home = () => {
                             </h2>
                         </div>
 
-                        <div className="col-md-2 col-lg-2 col-sm-12 Second2">
+                        <div className="col-md-2 col-lg-2 col-sm-12 Second2 ">
                             <i className="fa-solid fa-bowl-rice icn2"></i>
                             <h1>12,500+</h1>
                             <h2>Meals Distributed</h2>
                         </div>
 
-                        <div className="col-md-2 col-lg-2 col-sm-12 Second2">
+                        <div className="col-md-2 col-lg-2 col-sm-12 Second2 text-center">
                             <i className="fa-solid fa-users icn2"></i>
                             <h1>4+</h1>
                             <h2>Partner Organisations</h2>
                         </div>
 
-                        <div className="col-md-2 col-lg-2 col-sm-12 Second2">
+                        <div className="col-md-2 col-lg-2 col-sm-12 Second2 text-center">
                             <i className="fa-brands fa-envira icn2"></i>
                             <h1>6,800+ kg</h1>
                             <h2>Food Saved</h2>
                         </div>
 
-                        <div className="col-md-2 col-lg-2 col-sm-12 Second3">
+                        <div className="col-md-2 col-lg-2 col-sm-12 Second3 text-center">
                             <i className="fa-brands fa-pagelines icn2"></i>
                             <h1>3+</h1>
                             <h2>Communities Supported</h2>
