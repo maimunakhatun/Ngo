@@ -1,122 +1,217 @@
 import React from "react";
-import MenuBar from "./Menubar";
-import image1 from '../assets/cntct1.png'
+import img from "../assets/img1.jpeg";
 import Footer from "./Footer";
 
-
-const Contact = () => {
+const Home = () => {
     return (
         <>
-            <MenuBar />
-
+            {/* Top Description Section */}
             <div className="container-fluid descrip">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6 col-lg-6 col-sm-12 cntct1">
-                            <h3>Contact us</h3>
-                            <h1>Get in Touch</h1>
-                            <h2>We'd love to hear from you!</h2>
-                            <p>Have a question, suggestion, or want to get involved?<br />Reach out to us. Together, we can reduce food waste and create a healthier, happier community.</p>
-                            <h4>Let's make an impact - together!</h4>
 
+                        <div className="col-md-3 col-lg-3 col-sm-12 First">
+                            <i className="fa-solid fa-leaf icon1"></i>
+                            <h1>Reduce Food Waste</h1>
+                            <h2>
+                                We collect surplus food from
+                                <br />
+                                restaurants, stores and farms.
+                            </h2>
                         </div>
-                        <div className="col-md-6 col-lg-6 col-sm-12">
-                            <img src={image1} alt="Contact1" height={"350px"} width={"750px"} />
+
+                        <div className="col-md-3 col-lg-3 col-sm-12 Second">
+                            <i className="fa-solid fa-users icon2"></i>
+                            <h1>Support Communities</h1>
+                            <h2>
+                                We distribute nutritious food
+                                <br />
+                                to those in need.
+                            </h2>
                         </div>
+
+                        <div className="col-md-3 col-lg-3 col-sm-12 Second">
+                            <i className="fa-solid fa-arrows-spin icon3"></i>
+                            <h1>Create a Sustainable Future</h1>
+                            <h2>
+                                Less waste means a healthier
+                                <br />
+                                planet.
+                            </h2>
+                        </div>
+
+                        <div className="col-md-3 col-lg-3 col-sm-12 Forth">
+                            <i className="fa-regular fa-heart icon4"></i>
+                            <h1>Build Awareness</h1>
+                            <h2>
+                                We educate and inspire
+                                <br />
+                                for lasting change.
+                            </h2>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
+            {/* About Us Section */}
+            <div className="container">
+                <div className="row">
 
+                    <div className="col-md-6 col-lg-6 col-sm-12 F1">
+                        <img
+                            src={img}
+                            alt="Food waste management"
+                            height="400px"
+                            width="450px"
+                        />
+                    </div>
 
-            <div className="container mb-5">
-                <div className="row g-4">
+                    <div className="col-md-6 col-lg-6 col-sm-12 F2">
+                        <h2>About us</h2>
 
-                    {/* Contact Details */}
-                    <div className="col-md-7 col-lg-7 col-sm-12 cntct21">
-                        <h3>Our contact information</h3>
-                        <h1>We're Here to Help</h1>
-                              
-                            <div className="row g-4">
+                        <h1>
+                            Turning Surplus into <b>Smiles</b>
+                        </h1>
 
-                                {/* Phone */}
-                                <div className="col-md-6">
-                                    <div className="contact-card green-card">
-                                        <div className="contact-icon">
-                                            <i className="fa-solid fa-phone"></i>
-                                        </div>
-                                        <div className="contact-content">
-                                            <h5>PHONE</h5>
-                                            <p>+91 7679024968, +91 6297770824</p>
-                                            <p>(Mon – Fri, 9 AM – 6 PM)</p>
-                                        </div>
-                                    </div>
-                                </div>
+                        <p>
+                            Food for Tomorrow is a non-profit organisation
+                            focused on food waste management and community
+                            support. We work with businesses, farmers, and
+                            local partners to rescue edible surplus food and
+                            redistribute it to people in need, while also
+                            promoting sustainable practices and awareness
+                            about food waste.
+                        </p>
 
+                        <button className="bttn bttn">
+                            Our mission&nbsp;
+                            <i className="fa-solid fa-arrow-right icn"></i>
+                        </button>
+                    </div>
 
-                                {/* Email */}
-                                <div className="col-md-6">
-                                    <div className="contact-card green-card">
-                                        <div className="contact-icon">
-                                            <i className="fa-regular fa-envelope"></i>
-                                        </div>
-                                        <div className="contact-content">
-                                            <h5>EMAIL</h5>
-                                            <p>info@nowastefood.org</p>
-                                            <p>We usually reply within 24 hours.</p>
-                                        </div>
+                </div>
+            </div>
 
-                                    </div>
-                                </div>
+            {/* Impact Section */}
+            <div className="container-fluid descrip">
+                <div className="container">
+                    <div className="row">
 
+                        <div className="col-md-4 col-lg-4 col-sm-12 Second1">
+                            <h3>our impact</h3>
+                            <h1>Real Food. Real Change.</h1>
+                            <h2>
+                                Every meal saved makes a difference - for
+                                people and the planet
+                            </h2>
+                        </div>
 
-                                {/* Location */}
-                                <div className="col-md-6">
-                                    <div className="contact-card yellow-card">
-                                        <div className="contact-icon">
-                                            <i className="fa-solid fa-location-dot"></i>
-                                        </div>
-                                        <div className="contact-content">
-                                            <h5>OUR LOCATION</h5>
-                                            <p>Kabi Nazrul, A Zone</p>
-                                            <p>City Center, Durgapur – 713191</p>
-                                            <p>West Bengal, India</p>
-                                        </div>
+                        <div className="col-md-2 col-lg-2 col-sm-12 Second2">
+                            <i className="fa-solid fa-bowl-rice icn2"></i>
+                            <h1>12,500+</h1>
+                            <h2>Meals Distributed</h2>
+                        </div>
 
-                                    </div>
-                                </div>
+                        <div className="col-md-2 col-lg-2 col-sm-12 Second2 text-center">
+                            <i className="fa-solid fa-users icn2"></i>
+                            <h1>4+</h1>
+                            <h2>Partner Organisations</h2>
+                        </div>
 
+                        <div className="col-md-2 col-lg-2 col-sm-12 Second2 text-center">
+                            <i className="fa-brands fa-envira icn2"></i>
+                            <h1>6,800+ kg</h1>
+                            <h2>Food Saved</h2>
+                        </div>
 
-                                {/* Follow Us */}
-                                <div className="col-md-6">
-                                    <div className="contact-card green-card follow-card">
-                                        <div className="social-icons">
-                                            <i className="fa-brands fa-facebook-f"></i>
-                                            <i className="fa-brands fa-instagram"></i>
-                                            <i className="fa-brands fa-linkedin-in"></i>
-                                            <i className="fa-brands fa-youtube"></i>
-                                        </div>
-                                        <h5>FOLLOW US</h5>
-                                        <p>Stay updated with our latest</p>
-                                        <p>news, events and impact stories.</p>                                    
-                                    </div>
-                                    <div className="col-md-5 col-lg-5 col-sm-12 cntct22">
-                                        <h1></h1>
-                                    </div>
-                                </div>
-                            </div>
-                        
+                        <div className="col-md-2 col-lg-2 col-sm-12 Second3 text-center">
+                            <i className="fa-brands fa-pagelines icn2"></i>
+                            <h1>3+</h1>
+                            <h2>Communities Supported</h2>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
+            {/* How It Works */}
+            <h5>How it Works</h5>
+            <h4>From Surplus to Support</h4>
 
-            <Footer/>
+            <div className="container-fluid">
+                <div className="container">
+                    <div className="row">
 
+                        <div className="col-md-3 col-lg-3 col-sm-12 Third">
+                            <i className="fa-solid fa-shop i2"></i>
+                            <h1>1. Collect</h1>
+                            <h2>
+                                We collect surplus food from local businesses,
+                                stores and farms.
+                            </h2>
+                        </div>
 
+                        <div className="col-md-3 col-lg-3 col-sm-12 Third">
+                            <i className="fa-solid fa-truck i2"></i>
+                            <h1>2. Sort &amp; Ensure Safety</h1>
+                            <h2>
+                                Food is checked, sorted, and made safe for
+                                consumption
+                            </h2>
+                        </div>
+
+                        <div className="col-md-3 col-lg-3 col-sm-12 Third">
+                            <i className="fa-solid fa-users-between-lines i2"></i>
+                            <h1>3. Distribute</h1>
+                            <h2>
+                                We deliver the food to NGOs, shelters and
+                                communities in need.
+                            </h2>
+                        </div>
+
+                        <div className="col-md-3 col-lg-3 col-sm-12 Third">
+                            <i className="fa-brands fa-envira i2"></i>
+                            <h1>4. Create Impact</h1>
+                            <h2>
+                                Less food waste, healthier communities and a
+                                greener planet.
+                            </h2>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            {/* Call To Action */}
+            <div className="container-fluid back">
+                <div className="col-md-12 col-lg-12 col-sm-12 txt1">
+
+                    <h1>Be a part of the change</h1>
+
+                    <h2>Together We Can End Food Waste</h2>
+
+                    <p>
+                        Support our mission by donating, volunteering or
+                        spreading the word.
+                    </p>
+
+                    <button className="btn btn">
+                        <i className="fa-regular fa-heart"></i> Donate Now
+                    </button>
+
+                    <button className="btn btn">
+                        Get involved&nbsp;
+                        <i className="fa-solid fa-arrow-right icn"></i>
+                    </button>
+
+                </div>
+            </div>
+
+            <Footer />
         </>
-    )
-}
+    );
+};
 
+export default Home;
 
-export default Contact
