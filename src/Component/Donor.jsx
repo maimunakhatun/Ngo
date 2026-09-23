@@ -57,6 +57,7 @@ const Donor = () => {
       <div className="donor-left"><img src={donorImg} alt="donor" /></div>
 
       <div className="donor-right">
+        <div className="member-logo"><span>🌿 NOURISH</span>EARTH</div>
         <h1>Be a Donor - Share Your Surplus</h1>
         <p className="sub-text">Your surplus food can make a real difference.</p>
 

@@ -1,6 +1,7 @@
 
 
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -13,11 +14,21 @@ const Footer = () => {
           </div>
           <div className="col-lg-3">
             <h6>Quick Links</h6>
-            <p>Home</p><p>About</p><p>How It Works</p><p>Find Food</p><p>Get Involved</p><p>Contact</p>
+
+            <Link to="/" style={{textDecoration:"none"}}><p>Home</p></Link>
+            <Link to="/About" style={{textDecoration:"none"}}><p>About</p></Link>
+            <Link to="/Howitworks" style={{textDecoration:"none"}}><p>How It Works</p></Link>
+            <Link to="/Impact" style={{textDecoration:"none"}}><p>Impact</p></Link>
+            <p>Get Involved</p>
+            <Link to="/Contact" style={{textDecoration:"none"}}><p>Contact</p></Link>
           </div>
+          
           <div className="col-lg-3">
             <h6>Get Involved</h6>
-            <p> <i class="fa-solid fa-hand-holding-heart"></i>  Donate Food</p><p><i class="fa-solid fa-users"></i>    Volunteer</p><p><i class="fa-solid fa-users"> </i>  Partner with us</p><p><i class="fa-solid fa-leaf"></i>  Spread the world</p>
+            <Link to="/donor" style={{textDecoration:"none"}}> <p> <i class="fa-solid fa-hand-holding-heart"></i> Donate Food</p></Link> 
+            <Link to="/volunteer" style={{textDecoration:"none"}}><p><i class="fa-solid fa-users"></i>    Volunteer</p></Link>
+            <Link to="/member" style={{textDecoration:"none"}}><p><i class="fa-solid fa-users"> </i>  Partner with us</p></Link>
+            <p><i class="fa-solid fa-leaf"></i>  Spread the world</p>
           </div>
           <div className="col-lg-3">
             <h6>Contact Us</h6>

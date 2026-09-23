@@ -1,9 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Logo from "../assets/logo.png";
 import { NavLink, Link } from "react-router-dom";
 
 const MenuBar = () => {
   const [show, setShow] = useState(false);
+  const dropdownRef = useRef(null);
+
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target)
+    ) {
+      setShow(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
 
   return (
     <div className="container-fluid header-menu">
@@ -22,7 +40,7 @@ const MenuBar = () => {
                 <li><NavLink to="/Howitworks" className="menutab">HOW IT WORKS</NavLink></li>
                 <li><NavLink to="/Impact" className="menutab">IMPACT</NavLink></li>
 
-                <li className="dropdown-parent" style={{ position: 'relative' }}>
+                <li  ref={dropdownRef} className="dropdown-parent" style={{ position: 'relative' }}>
                   <span className="menutab"
                     onClick={() => setShow(!show)}
                     style={{ cursor: 'pointer' }}>

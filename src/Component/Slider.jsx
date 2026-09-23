@@ -1,7 +1,7 @@
 import react from 'react'
-import mmm from'../assets/slider1.jpeg'
-import sss from '../assets/slider2.jpeg'
-import sm from '../assets/slider3.jpeg'
+import mmm from '../assets/slider1.png'
+import sss from '../assets/slider2.png'
+import sm from '../assets/slider3.png'
 
 
 

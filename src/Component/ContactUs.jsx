@@ -202,7 +202,7 @@ const Contact = () => {
                     <h6 style={{fontSize:'13px', fontWeight:'800', color:'#0f3d0f'}}><i className="fa-brands fa-whatsapp" style={{color:'#0f5d30'}}></i> Quick Contact</h6>
                     <p style={{fontSize:'10px', color:'#666'}}>Prefer a quicker chat? Connect with us on WhatsApp.</p>
                     
-                    <a href="https://wa.me/919876543210" target="_blank" style={{
+                    <a href="https://wa.me/917679024968" target="_blank" style={{
                         background:'#0f5d30',
                         color:'white',
                         display:'flex',
@@ -230,7 +230,7 @@ const Contact = () => {
                     border:'1px solid #e0f2e3'
                 }}>
                     <i className="fa-solid fa-phone" style={{color:'#0f5d30', fontSize:'12px'}}></i>
-                    <p style={{fontSize:'9px', margin:0, color:'#555'}}>For urgent matters,<br/>please call us at<br/><b style={{fontSize:'10px', color:'#000'}}>+91 98765 43210</b></p>
+                    <p style={{fontSize:'9px', margin:0, color:'#555'}}>For urgent matters,<br/>please call us at<br/><b style={{fontSize:'10px', color:'#000'}}>+91 62977 70824</b></p>
                 </div>
             </div>
         </div>

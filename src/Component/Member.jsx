@@ -35,7 +35,7 @@ const Member = () => {
       </div>
 
       <div className="member-right">
-        <div className="member-logo"><span>🌿 HOPE</span>BRIDGE</div>
+        <div className="member-logo"><span>🌿 NOURISH</span>EARTH</div>
         <h1 className="member-title">Be a Member —<br/>Join Our Mission for Good</h1>
 
         <div className="member-tabs">

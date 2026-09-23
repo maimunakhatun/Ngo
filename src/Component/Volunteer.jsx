@@ -43,7 +43,7 @@ const Volunteer = () => {
       </div>
 
       <div className="vol-right">
-        <div style={{textAlign:'right', fontWeight:'bold'}}><span style={{color:'#2e7d32'}}>🌿 NGO</span> Waste Food</div>
+        <div className="member-logo"><span>🌿 NOURISH</span>EARTH</div>
         <h1 style={{fontSize:'26px', fontWeight:'bold', color:'#1b5e20', marginTop:'10px', lineHeight:'1.2'}}>Be a Volunteer - Your Time<br/>Can Change Lives</h1>
         <p style={{fontSize:'12px', color:'#555', marginTop:'8px'}}>Join NGO Waste Food to help reduce food waste and support our community.</p>
 

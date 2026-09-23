@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import img from "../assets/img1.jpeg";
-import Footer from './Footer'
+
 
 const Home = () => {
-    //  const [show, setShow] = useState(false);
+    const [show, setShow] = useState(false);
+const dropdownRef = useRef(null);
+
+useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target)
+    ) {
+      setShow(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
+
     return (
         <>
             {/* Top Description Section */}
@@ -185,7 +205,7 @@ const Home = () => {
             </div>
 
             {/* Call To Action */}
-            <div className="container-fluid back">
+            <div className="container back">
                 <div className="col-md-12 col-lg-12 col-sm-12 txt1">
 
                     <h1>Be a part of the change</h1>
@@ -198,20 +218,59 @@ const Home = () => {
                     </p>
 
 
-                    {/* <Link to="/donor"> */}
-                    <button className="btn btn">
-                        <i className="fa-regular fa-heart"></i> Donate Now
-                    </button>
-                    {/* </Link> */}
+                    <div className="dropdown-parent" style={{ position: "relative" }}>
+                    <Link to="/donor">
+                        <button className="btn btn">
+                            <i className="fa-regular fa-heart"></i> Donate Now
+                        </button>&nbsp;
+                    </Link>
 
-                    <button className="btn btn">
-                        Get involved&nbsp;
-                        <i className="fa-solid fa-arrow-right icn"></i>
-                    </button>
+
+                    
+
+                        <button
+                            ref={dropdownRef}
+                            className="btn btn"
+                            onClick={() => setShow(!show)}
+                        >
+                            GET INVOLVED ▾
+                        </button>
+
+                        {show && (
+                            <div className="dropdown-menu">
+
+                                <Link
+                                    to="/donor"
+                                    className="dropdown-item"
+                                    onClick={() => setShow(false)}
+                                >
+                                    As a Donor
+                                </Link>
+
+                                <Link
+                                    to="/member"
+                                    className="dropdown-item"
+                                    onClick={() => setShow(false)}
+                                >
+                                    As a Member
+                                </Link>
+
+                                <Link
+                                    to="/volunteer"
+                                    className="dropdown-item"
+                                    onClick={() => setShow(false)}
+                                >
+                                    As a Volunteer
+                                </Link>
+
+                            </div>
+                        )}
+
+                    </div>
 
                 </div>
             </div>
-            <Footer/>
+
         </>
     );
 };
