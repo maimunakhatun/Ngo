@@ -65,8 +65,8 @@ const Contact = () => {
                                     <div className="contact-icon"><i className="fa-solid fa-location-dot"></i></div>
                                     <div className="contact-content">
                                         <h5>OUR LOCATION</h5>
-                                        <p>Kabi Nazrul, A Zone</p>
-                                        <p>City Center, Durgapur – 713191</p>
+                                        <p>Fuljhore</p>
+                                        <p>Bidhannagar, Durgapur – 713191</p>
                                         <p>West Bengal, India</p>
                                     </div>
                                 </div>
