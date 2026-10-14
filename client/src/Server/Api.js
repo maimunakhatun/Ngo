@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "http://localhost:8000";
+const URL = "http://10.14.137.134:8000";
 
 // DONOR
 export const addDonor = async (data) => {

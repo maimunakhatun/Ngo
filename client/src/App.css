@@ -1931,3 +1931,942 @@ ul {
     font-weight: bold;
     cursor: pointer;
 }
+/* ================================
+   ADMIN PAGE
+================================ */
+
+.admin-page {
+  min-height: 100vh;
+  background: #f5faf8;
+  display: flex;
+  font-family: Arial, sans-serif;
+  color: #173b35;
+}
+
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.admin-sidebar {
+  width: 230px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #075b45, #034633);
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 20px 12px;
+  z-index: 10;
+}
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 8px 25px;
+}
+
+.admin-logo-icon {
+  width: 42px;
+  height: 42px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.admin-logo h2 {
+  font-size: 17px;
+  margin: 0;
+}
+
+.admin-logo p {
+  font-size: 9px;
+  margin: 3px 0 0;
+  opacity: 0.85;
+}
+
+
+/* SIDEBAR MENU */
+
+.admin-menu {
+  margin-top: 10px;
+}
+
+.admin-menu-item {
+  padding: 13px 14px;
+  border-radius: 7px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.admin-menu-item span {
+  width: 22px;
+  text-align: center;
+}
+
+.admin-menu-item:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.admin-menu-item.active {
+  background: #168765;
+}
+
+
+/* LOGOUT */
+
+.admin-logout {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+.admin-main {
+  margin-left: 230px;
+  width: calc(100% - 230px);
+}
+
+
+/* ================================
+   TOPBAR
+================================ */
+
+.admin-topbar {
+  height: 65px;
+  background: white;
+  border-bottom: 1px solid #e3eee9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.notification {
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.admin-avatar {
+  width: 35px;
+  height: 35px;
+  background: #075b45;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   CONTENT
+================================ */
+
+.admin-content {
+  padding: 18px;
+}
+
+
+/* WELCOME */
+
+.admin-welcome {
+  background: #e9f7f2;
+  border: 1px solid #d5ebe3;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.admin-welcome h1 {
+  font-size: 23px;
+  margin: 0 0 5px;
+}
+
+.admin-welcome p {
+  margin: 0;
+  color: #18856a;
+  font-size: 14px;
+}
+
+.admin-date {
+  background: white;
+  border-radius: 7px;
+  padding: 9px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 145px;
+}
+
+.admin-date small {
+  display: block;
+  color: #777;
+  font-size: 10px;
+}
+
+.admin-date strong {
+  display: block;
+  font-size: 12px;
+}
+
+
+/* ================================
+   STAT CARDS
+================================ */
+
+.admin-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e1ece8;
+  border-radius: 9px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 82px;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.donation-card .stat-icon {
+  background: #dff5eb;
+}
+
+.member-card .stat-icon {
+  background: #e4efff;
+}
+
+.volunteer-card .stat-icon {
+  background: #f0e5ff;
+}
+
+.meal-card .stat-icon {
+  background: #fff0e2;
+}
+
+.stat-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #4b5b58;
+}
+
+.stat-info h2 {
+  margin: 5px 0;
+  font-size: 23px;
+  color: #142e29;
+}
+
+.stat-info span {
+  font-size: 11px;
+  color: #087b5e;
+  cursor: pointer;
+}
+
+
+/* ================================
+   MIDDLE SECTION
+================================ */
+
+.admin-middle-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.admin-box {
+  background: white;
+  border: 1px solid #e1ece8;
+  border-radius: 9px;
+  padding: 15px;
+}
+
+.box-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.box-title h2 {
+  font-size: 17px;
+  margin: 0;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 12px;
+  font-size: 10px;
+}
+
+.chart-legend span:nth-child(1) {
+  color: #20a878;
+}
+
+.chart-legend span:nth-child(2) {
+  color: #2988e8;
+}
+
+.chart-legend span:nth-child(3) {
+  color: #8051c7;
+}
+
+
+/* ================================
+   CHART
+================================ */
+
+.fake-chart {
+  display: flex;
+  height: 220px;
+}
+
+.chart-y {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 9px;
+  color: #777;
+  padding-bottom: 25px;
+}
+
+.chart-area {
+  flex: 1;
+  position: relative;
+  border-left: 1px solid #ccdcd6;
+  border-bottom: 1px solid #ccdcd6;
+}
+
+.chart-lines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 35px,
+    #edf3f1 36px
+  );
+}
+
+.bars {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: relative;
+  z-index: 2;
+  padding: 0 15px 0;
+}
+
+.month {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 7px;
+}
+
+.month > span {
+  font-size: 9px;
+  color: #777;
+}
+
+.bar-group {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 180px;
+}
+
+.bar {
+  width: 14px;
+  border-radius: 3px 3px 0 0;
+}
+
+.bar.donation {
+  background: #20a878;
+}
+
+.bar.member {
+  background: #2988e8;
+}
+
+.bar.volunteer {
+  background: #8051c7;
+}
+
+
+/* ================================
+   RECENT ACTIVITIES
+================================ */
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 0;
+  border-bottom: 1px solid #edf1ef;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.activity-icon.green {
+  background: #ddf5e9;
+}
+
+.activity-icon.blue {
+  background: #e3efff;
+}
+
+.activity-icon.purple {
+  background: #eee5ff;
+}
+
+.activity-icon.orange {
+  background: #fff0df;
+}
+
+.activity-item div:nth-child(2) {
+  flex: 1;
+}
+
+.activity-item h4 {
+  font-size: 12px;
+  margin: 0 0 3px;
+}
+
+.activity-item p {
+  margin: 0;
+  font-size: 10px;
+  color: #777;
+}
+
+.activity-item > span {
+  font-size: 9px;
+  color: #888;
+  white-space: nowrap;
+}
+
+
+/* ================================
+   USERS
+================================ */
+
+.users-box {
+  margin-bottom: 20px;
+}
+
+.users-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.users-heading h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.user-tabs {
+  display: flex;
+  gap: 5px;
+}
+
+.user-tabs button {
+  background: transparent;
+  border: none;
+  padding: 8px 18px;
+  cursor: pointer;
+  color: #66736f;
+  font-size: 12px;
+}
+
+.user-tabs .active-tab {
+  color: #087b5e;
+  border-bottom: 2px solid #087b5e;
+}
+
+
+/* ================================
+   TABLE
+================================ */
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0 10px;
+}
+
+.table-header h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.table-header button,
+.small-table-title button {
+  background: #087b5e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f2f7f5;
+}
+
+th {
+  padding: 10px 8px;
+  font-size: 10px;
+  color: #45534f;
+  text-align: left;
+}
+
+td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #edf1ef;
+  font-size: 10px;
+  color: #394b47;
+}
+
+.view-btn {
+  background: transparent;
+  border: none;
+  color: #087b5e;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+
+/* ================================
+   SMALL TABLES
+================================ */
+
+.small-tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.small-table-box {
+  border: 1px solid #e5eeeb;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.small-table-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.small-table-title h3 {
+  font-size: 13px;
+  margin: 0;
+}
+
+.small-table-title button {
+  font-size: 9px;
+}
+
+
+/* ================================
+   PAGINATION
+================================ */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.pagination button {
+  width: 27px;
+  height: 27px;
+  border: none;
+  border-radius: 50%;
+  background: #edf5f2;
+  color: #087b5e;
+  cursor: pointer;
+}
+
+.pagination .page-active {
+  background: #087b5e;
+  color: white;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1100px) {
+
+  .admin-stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-middle-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .admin-sidebar {
+    width: 65px;
+    padding: 15px 8px;
+  }
+
+  .admin-logo div:not(.admin-logo-icon),
+  .admin-menu-item:not(.active) {
+    overflow: hidden;
+  }
+
+  .admin-logo h2,
+  .admin-logo p,
+  .admin-menu-item {
+    font-size: 0;
+  }
+
+  .admin-menu-item span {
+    font-size: 18px;
+  }
+
+  .admin-logout {
+    font-size: 0;
+  }
+
+  .admin-main {
+    margin-left: 65px;
+    width: calc(100% - 65px);
+  }
+
+  .admin-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .small-tables {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-welcome {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .admin-date {
+    min-width: 120px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .admin-content {
+    padding: 10px;
+  }
+
+  .admin-welcome {
+    flex-direction: column;
+  }
+
+  .admin-date {
+    width: 100%;
+  }
+
+  .chart-legend {
+    display: none;
+  }
+
+}
+/* =========================================
+   ADMIN LINK
+========================================= */
+
+.admin-menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* =========================================
+   INNER ADMIN PAGE
+========================================= */
+
+.admin-inner-page {
+  width: 100%;
+}
+
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-heading h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #173f2a;
+}
+
+.page-heading p {
+  margin-top: 7px;
+  color: #777;
+}
+
+
+/* =========================================
+   ADD BUTTON
+========================================= */
+
+.add-btn {
+  border: none;
+  background: #0b8f55;
+  color: white;
+  padding: 11px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.add-btn:hover {
+  background: #087743;
+}
+
+
+/* =========================================
+   PAGE TABLE
+========================================= */
+
+.page-table-box {
+  margin-top: 25px;
+}
+
+.page-table-box h2 {
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.completed {
+  background: #dff5e8;
+  color: #16834e;
+}
+
+.status.pending {
+  background: #fff0c9;
+  color: #9b7000;
+}
+
+
+/* =========================================
+   REPORTS
+========================================= */
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.report-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+}
+
+.report-card h3 {
+  margin-top: 0;
+  color: #173f2a;
+}
+
+.report-card p {
+  color: #777;
+}
+
+.report-card button {
+  background: #0b8f55;
+  border: none;
+  color: white;
+  padding: 9px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   SETTINGS
+========================================= */
+
+.settings-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+}
+
+.settings-box h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #173f2a;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  outline: none;
+}
+
+.save-btn {
+  background: #0b8f55;
+  color: white;
+  border: none;
+  padding: 11px 25px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .page-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+.dashboard-view-link {
+  text-decoration: none;
+  color: #16834e;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.dashboard-view-link:hover {
+  text-decoration: underline;
+  color: #087743;
+}
