@@ -124,7 +124,8 @@ const MenuBar = () => {
         </div>
 
         {/* Donate Button */}
-        <div className="col-md-2 col-lg-2 col-sm-12 top-right">
+        <div className="col-md-2 col-lg-2 col-sm-12 top-right mt-0"
+        style={{ position: "relative", top: "-10px" }}>
           <Link to="/donor">
             <button type="button" className="btn">
               Donate <i className="fa-regular fa-heart"></i>

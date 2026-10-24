@@ -2870,3 +2870,47 @@ td {
   text-decoration: underline;
   color: #087743;
 }
+
+/* Fix Contact Us alignment in navbar */
+.header-menu nav ul {
+    display: inline-block;
+    align-items: center;
+    flex-wrap: nowrap;
+    list-style: none;
+}
+
+.header-menu nav ul li {
+    display: flex;
+    align-items: center;
+}
+.header-menu {
+  height: auto;
+  min-height: 90px;
+}
+
+.header-menu .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.menu-area nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-area nav ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.menu-area .menutab {
+  line-height: normal;
+}

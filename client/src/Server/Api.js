@@ -1,6 +1,7 @@
+
 import axios from "axios";
 
-const URL = "http://10.14.137.134:8000";
+const URL = "http://localhost:8000";
 
 // DONOR
 export const addDonor = async (data) => {
@@ -9,7 +10,7 @@ export const addDonor = async (data) => {
 
 // MEMBER
 export const addMember = async (data) => {
-  return await axios.post(`${URL}/member`, data);
+  return await axios.post(`${URL}/api/member/add`, data);
 };
 
 // REGISTER
@@ -26,3 +27,4 @@ export const loginUser = async (data) => {
 export const addVolunteer = async (data) => {
   return await axios.post(`${URL}/volunteer`, data);
 };
+  

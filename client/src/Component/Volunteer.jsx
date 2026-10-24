@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import { addVolunteer, loginUser, registerUser } from '../Server/Api.js';
-import img from'../assets/volunteer.jpeg'
+import img from '../assets/volunteer.jpeg';
 
 const Volunteer = () => {
   const [tab, setTab] = useState('volunteer');
@@ -14,18 +15,42 @@ const Volunteer = () => {
 
   const handleVolunteer = async (e) => {
     e.preventDefault();
-    try { const res = await addVolunteer(volunteer); alert(res.data || "Volunteer Added!"); }
-    catch { alert("Backend 8000 cholche na"); }
+    try {
+      const res = await addVolunteer(volunteer);
+      const message = typeof res.data === 'string' ? res.data : res.data?.message;
+      alert(typeof message === 'string' ? message : JSON.stringify(res.data, null, 2));
+    } catch (error) {
+      console.error('Volunteer Error:', error.response?.data || error.message);
+      const message = error.response?.data?.message;
+      alert(typeof message === 'string' ? message : 'Volunteer registration failed. Please check the backend.');
+    }
   };
+
   const handleLogin = async (e) => {
     e.preventDefault();
-    try { const res = await loginUser(auth); alert(res.data.message || "Login Success"); }
-    catch { alert("Login Failed"); }
+    try {
+      const res = await loginUser(auth);
+      const message = typeof res.data === 'string' ? res.data : res.data?.message;
+      alert(typeof message === 'string' ? message : JSON.stringify(res.data, null, 2));
+    } catch (error) {
+      console.error('Login Error:', error.response?.data || error.message);
+      const message = error.response?.data?.message;
+      alert(typeof message === 'string' ? message : 'Login Failed');
+    }
   };
+
   const handleRegister = async (e) => {
     e.preventDefault();
-    try { const res = await registerUser(auth); alert(res.data.message || "Register Success"); setTab('login'); }
-    catch { alert("Register Failed"); }
+    try {
+      const res = await registerUser(auth);
+      const message = typeof res.data === 'string' ? res.data : res.data?.message;
+      alert(typeof message === 'string' ? message : JSON.stringify(res.data, null, 2));
+      setTab('login');
+    } catch (error) {
+      console.error('Register Error:', error.response?.data || error.message);
+      const message = error.response?.data?.message;
+      alert(typeof message === 'string' ? message : 'Register Failed');
+    }
   };
 
   return (
@@ -95,4 +120,5 @@ const Volunteer = () => {
     </div>
   );
 };
+
 export default Volunteer;

@@ -1,13 +1,15 @@
+
 import React, { useState } from "react";
 import donorImg from "../assets/img1.jpeg";
 import {
   addDonor,
   loginUser,
   registerUser
-} from "../Server/api";
+} from "../Server/Api.js";
 
 const Donor = () => {
   const [tab, setTab] = useState("donate");
+  const [loading, setLoading] = useState(false);
 
   const [donor, setDonor] = useState({
     name: "",
@@ -24,7 +26,6 @@ const Donor = () => {
     password: ""
   });
 
-  // Donor input change
   const onDonorChange = (e) => {
     setDonor({
       ...donor,
@@ -32,7 +33,6 @@ const Donor = () => {
     });
   };
 
-  // Login/Register input change
   const onAuthChange = (e) => {
     setAuth({
       ...auth,
@@ -40,38 +40,48 @@ const Donor = () => {
     });
   };
 
-  // Donate Submit
+  // DONATE FORM SUBMIT
   const handleDonate = async (e) => {
     e.preventDefault();
 
-    if (!donor.name) {
-      return alert("Please enter your name");
+    console.log("Donate button clicked:", donor);
+
+    if (!donor.name.trim()) {
+      alert("Please enter your name");
+      return;
     }
 
     if (!/^[0-9]{10}$/.test(donor.phone)) {
-      return alert("Please enter 10 digit number");
+      alert("Please enter a valid 10 digit phone number");
+      return;
     }
 
     if (!donor.foodType) {
-      return alert("Please select food type");
+      alert("Please select food type");
+      return;
     }
 
-    if (!donor.quantity) {
-      return alert("Please enter quantity");
+    if (!donor.quantity.trim()) {
+      alert("Please enter quantity");
+      return;
     }
 
-    if (!donor.pickupLocation) {
-      return alert("Please enter your pickup location");
+    if (!donor.pickupLocation.trim()) {
+      alert("Please enter pickup location");
+      return;
     }
 
     try {
+      setLoading(true);
+
       const res = await addDonor(donor);
 
-      alert("Donation Successful!");
+      console.log("Donation response:", res.data);
 
-      console.log("Server Response:", res.data);
+      alert(
+        res.data?.message || "Donation Successful!"
+      );
 
-      // Clear form
       setDonor({
         name: "",
         phone: "",
@@ -81,45 +91,65 @@ const Donor = () => {
       });
 
     } catch (error) {
-      console.log("Donation Error:", error);
+      console.error(
+        "Donation Error:",
+        error.response?.data || error
+      );
 
       if (error.response) {
         alert(
-          error.response.data.message || "Donation failed"
+          error.response.data?.message ||
+          error.response.data?.error ||
+          "Donation failed"
         );
       } else {
-        alert("Server connection failed");
+        alert(
+          "Cannot connect to server. Check if backend is running on port 8000."
+        );
       }
+    } finally {
+      setLoading(false);
     }
   };
 
-  // Login / Register Submit
+  // LOGIN / REGISTER
   const handleAuth = async (e, type) => {
     e.preventDefault();
 
     try {
-      if (type === "login") {
-        const res = await loginUser(auth);
-        alert(res.data);
-      } else {
-        const res = await registerUser(auth);
-        alert(res.data);
-      }
+      const res =
+        type === "login"
+          ? await loginUser(auth)
+          : await registerUser(auth);
+
+      alert(
+        res.data?.message ||
+        (typeof res.data === "string"
+          ? res.data
+          : "Request successful")
+      );
+
     } catch (error) {
-      console.log(error);
-      alert("Something went wrong");
+      console.error(
+        `${type} error:`,
+        error.response?.data || error
+      );
+
+      alert(
+        error.response?.data?.message ||
+        error.response?.data?.error ||
+        "Something went wrong. Check the server."
+      );
     }
   };
 
   return (
     <div className="donor-page">
-
       <div className="donor-left">
-        <img src={donorImg} alt="donor" />
+        <img src={donorImg} alt="Donor" />
       </div>
 
       <div className="donor-right">
-
         <div className="member-logo">
           <span>🌿 NOURISH</span>EARTH
         </div>
@@ -131,8 +161,8 @@ const Donor = () => {
         </p>
 
         <div className="tabs">
-
           <button
+            type="button"
             className={tab === "donate" ? "active" : ""}
             onClick={() => setTab("donate")}
           >
@@ -140,6 +170,7 @@ const Donor = () => {
           </button>
 
           <button
+            type="button"
             className={tab === "login" ? "active" : ""}
             onClick={() => setTab("login")}
           >
@@ -147,55 +178,53 @@ const Donor = () => {
           </button>
 
           <button
+            type="button"
             className={tab === "register" ? "active" : ""}
             onClick={() => setTab("register")}
           >
             Register
           </button>
-
         </div>
 
         <div className="form-card">
-
-          {/* DONATE FORM */}
-
           {tab === "donate" && (
             <form onSubmit={handleDonate}>
-
               <h2>Donate Now</h2>
 
               <div className="field">
                 <label>Name</label>
-
                 <input
                   name="name"
                   value={donor.name}
                   onChange={onDonorChange}
                   placeholder="Enter name"
                   className="form-control"
+                  required
                 />
               </div>
 
               <div className="field">
                 <label>Phone</label>
-
                 <input
+                  type="tel"
                   name="phone"
                   value={donor.phone}
                   onChange={onDonorChange}
                   placeholder="10 digit number"
                   className="form-control"
+                  maxLength={10}
+                  required
                 />
               </div>
 
               <div className="field">
                 <label>Food Type</label>
-
                 <select
                   name="foodType"
                   value={donor.foodType}
                   onChange={onDonorChange}
                   className="form-control"
+                  required
                 >
                   <option value="">Select</option>
                   <option value="Cooked">Cooked</option>
@@ -206,62 +235,57 @@ const Donor = () => {
 
               <div className="field">
                 <label>Quantity</label>
-
                 <input
                   name="quantity"
                   value={donor.quantity}
                   onChange={onDonorChange}
                   placeholder="5kg / 10 boxes"
                   className="form-control"
+                  required
                 />
               </div>
 
               <div className="field">
                 <label>Location</label>
-
                 <input
                   name="pickupLocation"
                   value={donor.pickupLocation}
                   onChange={onDonorChange}
                   placeholder="Pickup address"
                   className="form-control"
+                  required
                 />
               </div>
 
               <button
                 type="submit"
                 className="donate-btn"
+                disabled={loading}
               >
-                Donate Now
+                {loading ? "Submitting..." : "Donate Now"}
               </button>
-
             </form>
           )}
 
-          {/* LOGIN FORM */}
-
           {tab === "login" && (
-            <form
-              onSubmit={(e) => handleAuth(e, "login")}
-            >
-
+            <form onSubmit={(e) => handleAuth(e, "login")}>
               <h2>Login</h2>
 
               <div className="field">
                 <label>Email</label>
-
                 <input
+                  type="email"
                   name="email"
                   value={auth.email}
                   onChange={onAuthChange}
                   placeholder="Enter email"
                   className="form-control"
+                  required
                 />
               </div>
 
               <div className="field">
                 <label>Password</label>
-
                 <input
                   type="password"
                   name="password"
@@ -269,67 +293,60 @@ const Donor = () => {
                   onChange={onAuthChange}
                   placeholder="Enter password"
                   className="form-control"
+                  required
                 />
               </div>
 
-              <button
-                type="submit"
-                className="donate-btn"
-              >
+              <button type="submit" className="donate-btn">
                 Login
               </button>
-
             </form>
           )}
 
-          {/* REGISTER FORM */}
-
           {tab === "register" && (
-            <form
-              onSubmit={(e) => handleAuth(e, "register")}
-            >
-
+            <form onSubmit={(e) => handleAuth(e, "register")}>
               <h2>Register</h2>
 
               <div className="field">
                 <label>Name</label>
-
                 <input
                   name="name"
                   value={auth.name}
                   onChange={onAuthChange}
                   placeholder="Enter name"
                   className="form-control"
+                  required
                 />
               </div>
 
               <div className="field">
                 <label>Email</label>
-
                 <input
+                  type="email"
                   name="email"
                   value={auth.email}
                   onChange={onAuthChange}
                   placeholder="Enter email address"
                   className="form-control"
+                  required
                 />
               </div>
 
               <div className="field">
                 <label>Phone</label>
-
                 <input
+                  type="tel"
                   name="phone"
                   value={auth.phone}
                   onChange={onAuthChange}
-                  placeholder="Enter phone no"
+                  placeholder="Enter phone number"
                   className="form-control"
+                  required
                 />
               </div>
 
               <div className="field">
                 <label>Password</label>
-
                 <input
                   type="password"
                   name="password"
@@ -337,19 +354,15 @@ const Donor = () => {
                   onChange={onAuthChange}
                   placeholder="Enter password"
                   className="form-control"
+                  required
                 />
               </div>
 
-              <button
-                type="submit"
-                className="donate-btn"
-              >
+              <button type="submit" className="donate-btn">
                 Register
               </button>
-
             </form>
           )}
-
         </div>
       </div>
     </div>
